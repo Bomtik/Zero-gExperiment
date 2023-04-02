@@ -15,4 +15,4 @@ MonoBehaviour:
   Data:
     MovementData:
       ForwardSpeed: 10
-      JumpVelocity: 10
+      JumpVelocity: 20
