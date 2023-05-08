@@ -14,7 +14,6 @@ namespace Controllers.Weapon
 
         [SerializeField] private Transform GunPoint;
         [SerializeField] private GameObject BulletTrail;
-        [SerializeField] private float WeaponRange;
         #endregion
 
         #region Private Vars
@@ -49,7 +48,7 @@ namespace Controllers.Weapon
         {
             if (Input.GetMouseButtonDown(0))
             {
-                var Hit = Physics2D.Raycast(GunPoint.position, RotationDegree, WeaponRange);
+                var Hit = Physics2D.Raycast(GunPoint.position, RotationDegree, (Mathf.Sqrt(MousePos.x) + Mathf.Sqrt(MousePos.y)));
                 var Trail = Instantiate(BulletTrail, GunPoint.position, transform.rotation);
                 var TrailScript = Trail.GetComponent<BulletTrail>();
 
@@ -62,14 +61,13 @@ namespace Controllers.Weapon
 
                 else
                 {
-                    var EndPosition = GunPoint.position + RotationDegree * WeaponRange;
-                    TrailScript.SetTargetPosition(EndPosition);
+                    TrailScript.SetTargetPosition(MousePos);
                     StartCoroutine(DestoryTrail());
                 }
 
                 IEnumerator DestoryTrail()
                 {
-                    yield return new WaitForSeconds(0.2f);
+                    yield return new WaitForSeconds(10f);
                     Destroy(Trail);
                 }
             }
