@@ -56,5 +56,4 @@ public class Explosive : MonoSingleton<Explosive>, IHittable
 
         return results;
     }
-
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1885590827601232983}
   - component: {fileID: 1331136643889354236}
   - component: {fileID: 3009694510565890769}
-  - component: {fileID: 1347872915219463428}
   - component: {fileID: 3687769076295693}
   m_Layer: 0
   m_Name: BombItem
@@ -121,25 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd3fef12d004d9f4e8f8121da16bb59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidBody: {fileID: 0}
-  state: 0
-  lineRenderer: {fileID: 0}
---- !u!58 &1347872915219463428
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6281595422404870123}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  RigidBody: {fileID: 0}
+  State: 0
+  LineRenderer: {fileID: 0}
 --- !u!120 &3687769076295693
 LineRenderer:
   m_ObjectHideFlags: 0

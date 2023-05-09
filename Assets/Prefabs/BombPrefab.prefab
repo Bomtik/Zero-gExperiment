@@ -40,14 +40,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8577299050889484147}
     m_Modifications:
-    - target: {fileID: 1347872915219463428, guid: 189097e18370619468d867cacc04da5c, type: 3}
-      propertyPath: m_Radius
-      value: 0.18204254
-      objectReference: {fileID: 0}
-    - target: {fileID: 1347872915219463428, guid: 189097e18370619468d867cacc04da5c, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.0429672
-      objectReference: {fileID: 0}
     - target: {fileID: 1885590827601232983, guid: 189097e18370619468d867cacc04da5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -124,8 +116,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: BombItem
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1347872915219463428, guid: 189097e18370619468d867cacc04da5c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 189097e18370619468d867cacc04da5c, type: 3}
 --- !u!4 &1558471248729935419 stripped
 Transform:
