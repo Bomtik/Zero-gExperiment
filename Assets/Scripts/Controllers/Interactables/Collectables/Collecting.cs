@@ -7,28 +7,28 @@ using Controllers.Player;
 public class Collecting : MonoSingleton<Collecting>
 {
     [SerializeField] private GameObject itemToCollect;
-    public bool collectable = false;
+    public bool Collectable = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag is "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerMovementController>().selectedBomb = this.gameObject;
-            collectable = true;
+            collision.GetComponent<PlayerMovementController>().SelectedBomb = this.gameObject;
+            Collectable = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag is "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerMovementController>().selectedBomb = itemToCollect;
-            collectable = false;
+            collision.GetComponent<PlayerMovementController>().SelectedBomb = itemToCollect;
+            Collectable = false;
         }
     }
 
     public bool Collect(GameObject collectableObject)
     {
-        if (collectable)
+        if (Collectable)
         {
             itemToCollect.transform.position = collectableObject.transform.position;
             itemToCollect.transform.parent = collectableObject.transform;

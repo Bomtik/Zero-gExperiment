@@ -7,11 +7,11 @@ public class Rubble : MonoBehaviour, IHittable
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        OnHit(collision.gameObject);
+        WhenHit(collision.gameObject);
     }
-    public void OnHit(GameObject other)
+    public void WhenHit(GameObject other)
     {
-        if (other.tag is "Explosive")
+        if (other.CompareTag("Explosive"))
         {
             Destroy(gameObject);
         }

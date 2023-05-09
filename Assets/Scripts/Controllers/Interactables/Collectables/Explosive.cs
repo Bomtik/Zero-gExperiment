@@ -7,25 +7,30 @@ using Extensions;
 
 public class Explosive : MonoSingleton<Explosive>, IHittable
 {
-    public Rigidbody2D rigidBody;
-    public ExplosiveState state;
-    public LineRenderer lineRenderer;
+    public Rigidbody2D RigidBody;
+    public ExplosiveState State;
+    public LineRenderer LineRenderer;
     private new void Awake()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        rigidBody = GetComponent<Rigidbody2D>();
-        state = ExplosiveState.Picked;
+        SetComponents();
+    }
+
+    private void SetComponents()
+    {
+        LineRenderer = GetComponent<LineRenderer>();
+        RigidBody = GetComponent<Rigidbody2D>();
+        State = ExplosiveState.Picked;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (state is ExplosiveState.Thrown)
+        if (State is ExplosiveState.Thrown)
         {
-            OnHit(collision.gameObject);
+            WhenHit(collision.gameObject);
         }
     }
 
-    public void OnHit(GameObject other)
+    public void WhenHit(GameObject other)
     {
         //Play particle and destroy bomb
         Destroy(gameObject);

@@ -3,6 +3,6 @@ namespace Interfaces.Hittable
 {
     public interface IHittable
     {
-        void OnHit(GameObject other);
+        void WhenHit(GameObject other);
     }
 }

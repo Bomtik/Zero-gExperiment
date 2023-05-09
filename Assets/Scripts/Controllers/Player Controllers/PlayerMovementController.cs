@@ -11,37 +11,28 @@ namespace Controllers.Player
     public class PlayerMovementController : MonoBehaviour
     {
         #region Self Variables
-        public enum PlayerState
-        {
-            Idle,
-            Walking,
-            Jumping,
-            Collect,
-            Shooting,
-            Dead
-        }
         #region Serialzed Variables
 
-        [SerializeField] private LayerMask PlatformLayerMask;
+        [SerializeField] private LayerMask _platformLayerMask;
         #endregion
 
         #region Private Variables
 
         [ShowInInspector] private bool _isReadyToPlay = true;
 
-        private Rigidbody2D playerRigidbody2D;
-        private BoxCollider2D boxCollider2D;
+        private Rigidbody2D _playerRigidbody2D;
+        private BoxCollider2D _boxCollider2D;
         private MovementData _data;
-        private bool bAllowJumping;
-        private float jumpPressedRemember, groundedRemember, move;
+        private bool _allowJumping;
+        private float _jumpPressedRemember, _groundedRemember, _move;
         private Vector2 _velocity;
 
         #endregion
         #region Public Variables
 
         public PlayerState playerState;
-        public GameObject collectableObject, selectedBomb;
-        public static bool bFacingRight, canThrowBomb = false;
+        public GameObject CollectableObject, SelectedBomb;
+        public static bool FacingRight, ThrowBomb = false;
 
         #endregion
         #endregion
@@ -49,8 +40,13 @@ namespace Controllers.Player
         // set what needs to be set
         private void Awake()
         {
-            playerRigidbody2D = GetComponent<Rigidbody2D>();
-            boxCollider2D = GetComponent<BoxCollider2D>();
+            SetComponents();
+        }
+
+        private void SetComponents()
+        {
+            _playerRigidbody2D = GetComponent<Rigidbody2D>();
+            _boxCollider2D = GetComponent<BoxCollider2D>();
             playerState = PlayerState.Idle;
         }
 
@@ -78,8 +74,8 @@ namespace Controllers.Player
         // responsible for every frame update (inputs)
         private void Update()
         {
-            jumpPressedRemember -= Time.deltaTime;
-            groundedRemember -= Time.deltaTime;
+            _jumpPressedRemember -= Time.deltaTime;
+            _groundedRemember -= Time.deltaTime;
 
             if (!Grounded() && playerState is not PlayerState.Shooting)
             {
@@ -88,12 +84,12 @@ namespace Controllers.Player
 
             if (playerState is not PlayerState.Jumping)
             {
-                groundedRemember = 0.1f;
+                _groundedRemember = 0.1f;
             }
 
-            if (Input.GetButtonDown("Shoot") && canThrowBomb)
+            if (Input.GetButtonDown("Shoot") && ThrowBomb && playerState is not PlayerState.Jumping)
             {
-                selectedBomb.GetComponent<LineRenderer>().enabled = true;
+                SelectedBomb.GetComponent<LineRenderer>().enabled = true;
                 playerState = PlayerState.Shooting;
             }
 
@@ -105,18 +101,18 @@ namespace Controllers.Player
             if (Input.GetButtonDown("Jump") && (playerState is PlayerState.Walking || playerState is PlayerState.Jumping))
             {
                 playerState = PlayerState.Jumping;
-                jumpPressedRemember = 0.2f;
-                bAllowJumping = true;
+                _jumpPressedRemember = 0.2f;
+                _allowJumping = true;
             }
 
-            if (Input.GetButtonDown("Collect") && !canThrowBomb && selectedBomb != null)
+            if (Input.GetButtonDown("Collect") && !ThrowBomb && SelectedBomb != null)
             {
                 //playerState = PlayerState.Collect;
-                if (selectedBomb.GetComponent<Collecting>() == null)
+                if (SelectedBomb.GetComponent<Collecting>() == null)
                 {
                     return;
                 }
-                canThrowBomb = selectedBomb.GetComponent<Collecting>().Collect(collectableObject);
+                ThrowBomb = SelectedBomb.GetComponent<Collecting>().Collect(CollectableObject);
             }
         }
 
@@ -125,33 +121,18 @@ namespace Controllers.Player
         {
             if (playerState is PlayerState.Shooting)
             {
-                StopPlayer();
-
-                Vector2 DragEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                _velocity = (DragEndPosition - (Vector2)collectableObject.transform.position);
-                _velocity.y -= Physics2D.gravity.y / 2;
-
-
-                Vector2[] trajectory = Explosive.Instance.Plot(selectedBomb.GetComponent<Explosive>().rigidBody, (Vector2)collectableObject.transform.position, _velocity, 500);
-                selectedBomb.GetComponent<Explosive>().lineRenderer.positionCount = trajectory.Length;
-
-                Vector3[] positions = new Vector3[trajectory.Length];
-                for (int i = 0; i < trajectory.Length; i++)
-                {
-                    positions[i] = trajectory[i];
-                }
-                selectedBomb.GetComponent<Explosive>().lineRenderer.SetPositions(positions);
+                DisplayTrajectoryLine();
             }
 
             if (playerState is PlayerState.Walking || playerState is PlayerState.Jumping)
             {
-                move = Input.GetAxis("Horizontal");
-                playerRigidbody2D.velocity = new Vector2(move * _data.ForwardSpeed, playerRigidbody2D.velocity.y);
+                _move = Input.GetAxis("Horizontal");
+                _playerRigidbody2D.velocity = new Vector2(_move * _data.ForwardSpeed, _playerRigidbody2D.velocity.y);
 
-                if (bAllowJumping && jumpPressedRemember > 0 && groundedRemember > 0)
+                if (_allowJumping && _jumpPressedRemember > 0 && _groundedRemember > 0)
                 {
-                    jumpPressedRemember = 0f;
-                    groundedRemember = 0f;
+                    _jumpPressedRemember = 0f;
+                    _groundedRemember = 0f;
 
                     Jump();
                 }
@@ -163,33 +144,53 @@ namespace Controllers.Player
         // calls the shooting method form Explosive.cs class + change what needs to be 
         private void Shoot()
         {
-            if (collectableObject.transform.childCount > 0)
+            if (CollectableObject.transform.childCount > 0)
             {
-                collectableObject.GetComponentInChildren<Explosive>().state = ExplosiveState.Thrown;
-                collectableObject.transform.DetachChildren();
+                CollectableObject.GetComponentInChildren<Explosive>().State = ExplosiveState.Thrown;
+                CollectableObject.transform.DetachChildren();
             }
 
-            Destroy(selectedBomb.GetComponent<LineRenderer>());
-            selectedBomb.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            selectedBomb.GetComponent<Explosive>().rigidBody.AddForce(_velocity, ForceMode2D.Impulse);
-            canThrowBomb = false;
+            Destroy(SelectedBomb.GetComponent<LineRenderer>());
+            SelectedBomb.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            SelectedBomb.GetComponent<Explosive>().RigidBody.AddForce(_velocity, ForceMode2D.Impulse);
+            ThrowBomb = false;
             playerState = PlayerState.Walking;
         }
-        
+
+        // Trajectory line
+        private void DisplayTrajectoryLine()
+        {
+            StopPlayer();
+
+            Vector2 DragEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            _velocity = (DragEndPosition - (Vector2)CollectableObject.transform.position);
+            _velocity.y -= Physics2D.gravity.y / 2;
+
+            Vector2[] trajectory = Explosive.Instance.Plot(SelectedBomb.GetComponent<Explosive>().RigidBody, (Vector2)CollectableObject.transform.position, _velocity, 500);
+            SelectedBomb.GetComponent<Explosive>().LineRenderer.positionCount = trajectory.Length;
+
+            Vector3[] positions = new Vector3[trajectory.Length];
+            for (int i = 0; i < trajectory.Length; i++)
+            {
+                positions[i] = trajectory[i];
+            }
+            SelectedBomb.GetComponent<Explosive>().LineRenderer.SetPositions(positions);
+        }
+
         // Jump method
         private void Jump()
         {
-            playerRigidbody2D.AddForce(Vector2.up * _data.JumpVelocity, ForceMode2D.Impulse);
-            bAllowJumping = false;
+            _playerRigidbody2D.AddForce(Vector2.up * _data.JumpVelocity, ForceMode2D.Impulse);
+            _allowJumping = false;
         }
 
         // Flipping the player when switching movement direction
         private void Flip()
         {
-            if (bFacingRight && move > 0f || !bFacingRight && move < 0f)
+            if (FacingRight && _move > 0f || !FacingRight && _move < 0f)
             {
                 Vector3 LocalScale = this.transform.localScale;
-                bFacingRight = !bFacingRight;
+                FacingRight = !FacingRight;
                 LocalScale.x *= -1f;
                 this.transform.localScale = LocalScale;
             }
@@ -206,14 +207,14 @@ namespace Controllers.Player
         // checks when player on ground
         private bool Grounded()
         {
-            RaycastHit2D Hitcast2D = Physics2D.BoxCast(boxCollider2D.bounds.center, boxCollider2D.bounds.size, 0f, Vector2.down, 0.05f, PlatformLayerMask);
+            RaycastHit2D Hitcast2D = Physics2D.BoxCast(_boxCollider2D.bounds.center, _boxCollider2D.bounds.size, 0f, Vector2.down, 0.05f, _platformLayerMask);
             return Hitcast2D.collider != null;
         }
 
         // completely stops player
         private void StopPlayer()
         {
-            playerRigidbody2D.velocity = float2.zero;
+            _playerRigidbody2D.velocity = float2.zero;
         }
 
         internal void IsReadyToPlay(bool condition)
