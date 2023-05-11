@@ -16,3 +16,4 @@ MonoBehaviour:
     MovementData:
       ForwardSpeed: 10
       JumpVelocity: 20
+      StatePlayer: 0

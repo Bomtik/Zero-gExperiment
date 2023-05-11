@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Explosive
   - Acid
+  - Rubble
+  - Controllable
   layers:
   - Default
   - TransparentFX

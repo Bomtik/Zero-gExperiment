@@ -20,6 +20,8 @@ namespace Controllers.Weapon
         #region Private Vars
         private Vector3 _mousePos, _rotationDegree;
         private float _distance;
+        private Vector2 _direction;
+        private bool _facingRight;
 
         #endregion
         #endregion
@@ -35,36 +37,50 @@ namespace Controllers.Weapon
             _rotationDegree = _mousePos - transform.position;
             _distance = _mousePos.x - gunPoint.position.x;
 
-            if (_distance <= 0 && !PlayerMovementController.FacingRight)
+            if (((int)_distance) < 0 && !_facingRight)
             {
-                return;
+                Flip();
             }
 
-            else if (_distance >=  0 && PlayerMovementController.FacingRight)
+            else if (((int)_distance) >  0 && _facingRight)
             {
-                return;
+                Flip();
             }
 
             float RotZ = Mathf.Atan2(_rotationDegree.y, _rotationDegree.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, RotZ);
 
-            if (PlayerMovementController.FacingRight)
+            if (_facingRight)
             {
                 transform.rotation = Quaternion.Euler(0, 0, RotZ + 180);
             }
 
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("shot");
-                var Hit = Physics2D.Raycast(gunPoint.position, _rotationDegree, (Mathf.Sqrt(_mousePos.x) + Mathf.Sqrt(_mousePos.y)));
+                if (Input.GetButton("Up"))
+                {
+                    _direction = Vector2.up;
+                }
+                else if (Input.GetButton("Down"))
+                {
+                    _direction = Vector2.down;
+                }
+                else if (Input.GetButton("Left"))
+                {
+                    _direction = Vector2.left;
+                }
+                else if (Input.GetButton("Right"))
+                {
+                    _direction = Vector2.right;
+                }
+                var Hit = Physics2D.Raycast(gunPoint.position, _rotationDegree);
                 var Trail = Instantiate(bulletTrail, gunPoint.position, transform.rotation);
                 var TrailScript = Trail.GetComponent<BulletTrail>();
 
-                if (Hit.collider != null && !Hit.collider.isTrigger)
+                if (Hit.collider != null)
                 {
                     TrailScript.SetTargetPosition(Hit.point);
-                    /*var Hittable = Hit.collider.GetComponent<IHittable>();
-                    Hittable?.Hit();*/
+                    ChaosActivate(Hit.collider.gameObject, _direction);
                 }
 
                 else
@@ -78,6 +94,26 @@ namespace Controllers.Weapon
                     yield return new WaitForSeconds(10f);
                     Destroy(Trail);
                 }
+            }
+        }
+
+        // Flipping the player when switching movement direction
+        private void Flip()
+        {
+            GameObject player = FindObjectOfType<PlayerMovementController>().gameObject;
+            Vector3 LocalScale = player.transform.localScale;
+            _facingRight = !_facingRight;
+            LocalScale.x *= -1f;
+            player.transform.localScale = LocalScale;
+        }
+
+        private void ChaosActivate(GameObject control, Vector2 direction)
+        {
+            if (control.CompareTag("Controllable"))
+            {
+                PlayerMovementController.States = PlayerState.Controlling;
+                ChaosControl.Direction = direction;
+                ChaosControl.Shoot = true;
             }
         }
     }

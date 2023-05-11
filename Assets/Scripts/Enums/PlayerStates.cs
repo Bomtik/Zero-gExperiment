@@ -5,7 +5,7 @@ namespace Enums
         Idle,
         Walking,
         Jumping,
-        Collect,
+        Controlling,
         Shooting,
         Dead
     }

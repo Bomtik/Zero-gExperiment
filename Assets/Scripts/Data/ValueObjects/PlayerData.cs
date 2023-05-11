@@ -1,4 +1,5 @@
 using System;
+using Enums;
 
 namespace Data.ValueObjects
 {
@@ -13,11 +14,13 @@ namespace Data.ValueObjects
     {
         public float ForwardSpeed;
         public float JumpVelocity;
+        public PlayerState StatePlayer;
 
-        public MovementData(float forwardSpeed, float jumpVelocity)
+        public MovementData(float forwardSpeed, float jumpVelocity, PlayerState state)
         {
             ForwardSpeed = forwardSpeed;
             JumpVelocity = jumpVelocity;
+            StatePlayer = state;
         }
     }
 }

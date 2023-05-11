@@ -11,7 +11,7 @@ public class Collecting : MonoSingleton<Collecting>
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !PlayerMovementController.ThrowBomb)
         {
             collision.GetComponent<PlayerMovementController>().SelectedBomb = this.gameObject;
             Collectable = true;
@@ -19,7 +19,7 @@ public class Collecting : MonoSingleton<Collecting>
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !PlayerMovementController.ThrowBomb)
         {
             collision.GetComponent<PlayerMovementController>().SelectedBomb = itemToCollect;
             Collectable = false;

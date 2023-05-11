@@ -19,19 +19,18 @@ namespace Controllers.Player
         #region Private Variables
 
         [ShowInInspector] private bool _isReadyToPlay = true;
-
         private Rigidbody2D _playerRigidbody2D;
         private BoxCollider2D _boxCollider2D;
         private MovementData _data;
         private bool _allowJumping;
         private float _jumpPressedRemember, _groundedRemember, _move;
         private Vector2 _velocity;
-        private PlayerState _playerState;
+        [ShowInInspector] public static PlayerState States;
 
         #endregion
         #region Public Variables
         public GameObject CollectableObject, SelectedBomb;
-        public static bool FacingRight, ThrowBomb = false;
+        public static bool ThrowBomb = false;
 
         #endregion
         #endregion
@@ -46,7 +45,7 @@ namespace Controllers.Player
         {
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
             _boxCollider2D = GetComponent<BoxCollider2D>();
-            _playerState = PlayerState.Idle;
+            States = PlayerState.Idle;
         }
 
         // get player movement data
@@ -64,7 +63,7 @@ namespace Controllers.Player
                 return;
             }
 
-            if (_playerState is not PlayerState.Dead) 
+            if (States is not PlayerState.Dead) 
             {
                 MovePlayer();
             }
@@ -73,40 +72,45 @@ namespace Controllers.Player
         // responsible for every frame update (inputs)
         private void Update()
         {
+            CheckInputs();
+        }
+
+        private void CheckInputs()
+        {
             _jumpPressedRemember -= Time.deltaTime;
             _groundedRemember -= Time.deltaTime;
 
-            if (!Grounded() && _playerState is not PlayerState.Shooting)
+            if (!Grounded() && States is not PlayerState.Shooting)
             {
-                _playerState = PlayerState.Jumping;
+                States = PlayerState.Jumping;
             }
 
-            if (_playerState is not PlayerState.Jumping)
+            if (States is not PlayerState.Jumping)
             {
                 _groundedRemember = 0.1f;
             }
 
-            if (Input.GetButtonDown("Shoot") && ThrowBomb && _playerState is not PlayerState.Jumping)
+            if (Input.GetButtonDown("Shoot") && ThrowBomb && States is not PlayerState.Jumping)
             {
                 SelectedBomb.GetComponent<LineRenderer>().enabled = true;
-                _playerState = PlayerState.Shooting;
+                States = PlayerState.Shooting;
             }
 
-            if (_playerState is PlayerState.Shooting && Input.GetButtonUp("Shoot"))
+            if (States is PlayerState.Shooting && Input.GetButtonUp("Shoot"))
             {
                 Shoot();
             }
 
-            if (Input.GetButtonDown("Jump") && (_playerState is PlayerState.Walking || _playerState is PlayerState.Jumping))
+            if (Input.GetButtonDown("Jump") && (States is not PlayerState.Shooting || States is not PlayerState.Dead))
             {
-                _playerState = PlayerState.Jumping;
+                States = PlayerState.Jumping;
                 _jumpPressedRemember = 0.2f;
                 _allowJumping = true;
             }
 
             if (Input.GetButtonDown("Collect") && !ThrowBomb && SelectedBomb != null)
             {
-                //_playerState = PlayerState.Collect;
+                //States = PlayerState.Collect;
                 if (SelectedBomb.GetComponent<Collecting>() == null)
                 {
                     return;
@@ -118,12 +122,12 @@ namespace Controllers.Player
         // responsible for player movement 
         private void MovePlayer()
         {
-            if (_playerState is PlayerState.Shooting)
+            if (States is PlayerState.Shooting)
             {
                 DisplayTrajectoryLine();
             }
 
-            if (_playerState is PlayerState.Walking || _playerState is PlayerState.Jumping)
+            if (States is PlayerState.Walking || States is PlayerState.Jumping || States is PlayerState.Controlling)
             {
                 _move = Input.GetAxis("Horizontal");
                 _playerRigidbody2D.velocity = new Vector2(_move * _data.ForwardSpeed, _playerRigidbody2D.velocity.y);
@@ -135,8 +139,6 @@ namespace Controllers.Player
 
                     Jump();
                 }
-
-                Flip();
             }
         }
 
@@ -153,7 +155,7 @@ namespace Controllers.Player
             SelectedBomb.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             SelectedBomb.GetComponent<Explosive>().RigidBody.AddForce(_velocity, ForceMode2D.Impulse);
             ThrowBomb = false;
-            _playerState = PlayerState.Walking;
+            States = PlayerState.Walking;
         }
 
         // Trajectory line
@@ -183,23 +185,11 @@ namespace Controllers.Player
             _allowJumping = false;
         }
 
-        // Flipping the player when switching movement direction
-        private void Flip()
-        {
-            if (FacingRight && _move > 0f || !FacingRight && _move < 0f)
-            {
-                Vector3 LocalScale = this.transform.localScale;
-                FacingRight = !FacingRight;
-                LocalScale.x *= -1f;
-                this.transform.localScale = LocalScale;
-            }
-        }
-
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if ((other.gameObject.CompareTag("Ground") || Grounded()) && (_playerState is not PlayerState.Shooting))
+            if ((other.gameObject.CompareTag("Ground") || Grounded()) && (States is not PlayerState.Shooting))
             {
-                _playerState = PlayerState.Walking;
+                States = PlayerState.Walking;
             }
         }
 
