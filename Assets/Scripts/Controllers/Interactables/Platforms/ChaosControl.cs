@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Enums;
 using Controllers.Player;
+using Extensions;
 
 public class ChaosControl : MonoBehaviour
 {

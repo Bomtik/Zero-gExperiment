@@ -16,6 +16,8 @@ public class Rubble : MonoBehaviour, IHittable
         {
             if (gameObject.CompareTag("DoublePlatform"))
             {
+                rubble1.SetActive(true);
+                rubble2.SetActive(true);
                 rubble1.GetComponent<ChaosControl>().Direction = Vector2.left;
                 rubble1.GetComponent<ChaosControl>().Shoot = true;
                 rubble2.GetComponent<ChaosControl>().Direction = Vector2.right;
