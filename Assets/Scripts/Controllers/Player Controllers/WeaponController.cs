@@ -22,6 +22,7 @@ namespace Controllers.Weapon
         private float _distance;
         private Vector2 _direction;
         private bool _facingRight;
+        private ChaosControl _chaosControl;
 
         #endregion
         #endregion
@@ -55,7 +56,7 @@ namespace Controllers.Weapon
                 transform.rotation = Quaternion.Euler(0, 0, RotZ + 180);
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !_chaosControl.Shoot)
             {
                 if (Input.GetButton("Up"))
                 {
@@ -73,6 +74,11 @@ namespace Controllers.Weapon
                 {
                     _direction = Vector2.right;
                 }
+                else
+                {
+                    _direction = Vector2.zero;
+                }
+
                 var Hit = Physics2D.Raycast(gunPoint.position, _rotationDegree);
                 var Trail = Instantiate(bulletTrail, gunPoint.position, transform.rotation);
                 var TrailScript = Trail.GetComponent<BulletTrail>();
@@ -112,8 +118,8 @@ namespace Controllers.Weapon
             if (control.CompareTag("Controllable"))
             {
                 PlayerMovementController.States = PlayerState.Controlling;
-                ChaosControl.Direction = direction;
-                ChaosControl.Shoot = true;
+                control.GetComponent<ChaosControl>().Direction = direction;
+                control.GetComponent<ChaosControl>().Shoot = true;
             }
         }
     }

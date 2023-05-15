@@ -6,9 +6,9 @@ using Controllers.Player;
 
 public class ChaosControl : MonoBehaviour
 {
-    public static bool Shoot;
+    public bool Shoot;
     private RaycastHit2D raycastHit2D;
-    public static Vector2 Direction;
+    public Vector2 Direction;
 
     private void Update()
     {
@@ -18,16 +18,25 @@ public class ChaosControl : MonoBehaviour
         }
     }
 
-    private void ControlChaos()
+    public void ControlChaos()
     {
-        raycastHit2D = Physics2D.Raycast(transform.position, Direction);
-        transform.position = Vector2.Lerp(transform.position, (raycastHit2D.point - new Vector2(Direction.x * 0.5f, Direction.y * 0.5f)), Time.deltaTime);
+        if (Direction == Vector2.zero)
+        {
+            PlayerMovementController.States = PlayerState.Walking;
+            Shoot = false;
+            return;
+        }
+        if (Physics2D.Raycast(transform.position, Direction).point != Vector2.zero)
+        {
+            raycastHit2D = Physics2D.Raycast(transform.position, Direction);
+        }
 
-        if (transform.position == raycastHit2D.transform.position)
+        transform.position = Vector2.MoveTowards(transform.position, (raycastHit2D.point - new Vector2(Direction.x * 0.5f, Direction.y * 0.5f)), 0.01f);
+
+        if ((Vector2)transform.position == raycastHit2D.point - new Vector2(Direction.x * 0.5f, Direction.y * 0.5f))
         {
             PlayerMovementController.States = PlayerState.Walking;
             Shoot = false;
         }
-
     }
 }
