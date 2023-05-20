@@ -16,14 +16,20 @@ public class Rubble : MonoBehaviour, IHittable
         {
             if (gameObject.CompareTag("DoublePlatform"))
             {
-                rubble1.SetActive(true);
-                rubble2.SetActive(true);
-                rubble1.GetComponent<ChaosControl>().Direction = Vector2.left;
-                rubble1.GetComponent<ChaosControl>().Shoot = true;
-                rubble2.GetComponent<ChaosControl>().Direction = Vector2.right;
-                rubble2.GetComponent<ChaosControl>().Shoot = true;
+                ActivateRubble(rubble1, Vector2.left);
+                ActivateRubble(rubble2, Vector2.right);
             }
             Destroy(gameObject);
         }
+    }
+
+    private void ActivateRubble(GameObject rubble, Vector2 direction)
+    {
+        rubble.SetActive(true);
+        ChaosControl chaosControl = rubble.GetComponent<ChaosControl>();
+
+        if (chaosControl == null) { return; }
+        chaosControl.Direction = direction;
+        chaosControl.IsShooting = true;
     }
 }

@@ -1,43 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Enums;
 using Controllers.Player;
-using Extensions;
 
 public class ChaosControl : MonoBehaviour
 {
-    public bool Shoot;
-    private RaycastHit2D raycastHit2D;
+    public bool IsShooting;
     public Vector2 Direction;
+
+    private RaycastHit2D raycastHit2D;
 
     private void Update()
     {
-        if (PlayerMovementController.States is PlayerState.Controlling || Shoot)
+        if (PlayerMovementController.States is PlayerState.Controlling || IsShooting)
         {
             ControlChaos();
         }
     }
 
-    public void ControlChaos()
+    private void ControlChaos()
     {
         if (Direction == Vector2.zero)
         {
-            PlayerMovementController.States = PlayerState.Walking;
-            Shoot = false;
+            SetPlayerWalkingState();
+            IsShooting = false;
             return;
         }
-        if (Physics2D.Raycast(transform.position, Direction).point != Vector2.zero)
-        {
-            raycastHit2D = Physics2D.Raycast(transform.position, Direction);
-        }
 
-        transform.position = Vector2.MoveTowards(transform.position, (raycastHit2D.point - new Vector2(Direction.x * 0.5f, Direction.y * 0.5f)), 0.01f);
+        PerformRaycast();
 
-        if ((Vector2)transform.position == raycastHit2D.point - new Vector2(Direction.x * 0.5f, Direction.y * 0.5f))
+        var targetPosition = raycastHit2D.point - new Vector2(Direction.x * 0.5f, Direction.y * 0.5f);
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * 3);
+
+        if ((Vector2)transform.position == targetPosition)
         {
-            PlayerMovementController.States = PlayerState.Walking;
-            Shoot = false;
+            if (raycastHit2D.collider.gameObject.CompareTag("Button"))
+            {
+                raycastHit2D.collider.GetComponent<SlidingDoor>().WhenHit(gameObject);
+            }
+            SetPlayerWalkingState();
+            IsShooting = false;
         }
+    }
+    private void PerformRaycast()
+    {
+        var raycastHit = Physics2D.Raycast(transform.position, Direction);
+        if (raycastHit.point != Vector2.zero)
+        {
+            raycastHit2D = raycastHit;
+        }
+    }
+    private void SetPlayerWalkingState()
+    {
+        if (PlayerMovementController.States is PlayerState.Shooting)
+        {
+            return;
+        }
+        PlayerMovementController.States = PlayerState.Walking;
     }
 }

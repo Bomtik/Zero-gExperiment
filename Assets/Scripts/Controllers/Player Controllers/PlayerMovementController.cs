@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Sirenix.OdinInspector;
-using Unity.Mathematics;
 using Data.ValueObjects;
 using Enums;
 
@@ -11,26 +7,24 @@ namespace Controllers.Player
     public class PlayerMovementController : MonoBehaviour
     {
         #region Self Variables
-        #region Serialzed Variables
-
-        [SerializeField] private LayerMask _platformLayerMask;
-        #endregion
-
         #region Private Variables
 
-        [ShowInInspector] private bool _isReadyToPlay = true;
+        [SerializeField] private LayerMask _platformLayerMask;
+        private bool _isReadyToPlay = true;
         private Rigidbody2D _playerRigidbody2D;
         private BoxCollider2D _boxCollider2D;
         private MovementData _data;
         private bool _allowJumping;
         private float _jumpPressedRemember, _groundedRemember, _move;
         private Vector2 _velocity;
-        [ShowInInspector] public static PlayerState States;
+        public static PlayerState States;
 
         #endregion
+
         #region Public Variables
+
         public GameObject CollectableObject, SelectedBomb;
-        public static bool ThrowBomb = false;
+        public bool ThrowBomb{ get; private set;  }
 
         #endregion
         #endregion
@@ -38,10 +32,10 @@ namespace Controllers.Player
         // set what needs to be set
         private void Awake()
         {
-            SetComponents();
+            InitializeComponents();
         }
 
-        private void SetComponents()
+        private void InitializeComponents()
         {
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
             _boxCollider2D = GetComponent<BoxCollider2D>();
@@ -72,24 +66,41 @@ namespace Controllers.Player
         // responsible for every frame update (inputs)
         private void Update()
         {
-            CheckInputs();
+            HandleInputs();
         }
 
-        private void CheckInputs()
+        private void HandleInputs()
+        {
+            HandleJumpInput();
+            HandleShootInput();
+            HandleCollectInput();
+        }
+
+        private void HandleJumpInput()
         {
             _jumpPressedRemember -= Time.deltaTime;
             _groundedRemember -= Time.deltaTime;
 
-            if (!Grounded() && States is not PlayerState.Shooting)
+            if (!Grounded() && !(States is PlayerState.Shooting))
             {
                 States = PlayerState.Jumping;
             }
 
-            if (States is not PlayerState.Jumping)
+            if (States != PlayerState.Jumping)
             {
                 _groundedRemember = 0.1f;
             }
 
+            if (Input.GetButtonDown("Jump") && (States != PlayerState.Shooting || States != PlayerState.Dead))
+            {
+                States = PlayerState.Jumping;
+                _jumpPressedRemember = 0.2f;
+                _allowJumping = true;
+            }
+        }
+
+        private void HandleShootInput()
+        {
             if (Input.GetButtonDown("Shoot") && ThrowBomb && States is not PlayerState.Jumping)
             {
                 SelectedBomb.GetComponent<LineRenderer>().enabled = true;
@@ -100,23 +111,23 @@ namespace Controllers.Player
             {
                 Shoot();
             }
+        }
 
-            if (Input.GetButtonDown("Jump") && (States is not PlayerState.Shooting || States is not PlayerState.Dead))
-            {
-                States = PlayerState.Jumping;
-                _jumpPressedRemember = 0.2f;
-                _allowJumping = true;
-            }
-
+        private void HandleCollectInput()
+        {
             if (Input.GetButtonDown("Collect") && !ThrowBomb && SelectedBomb != null)
             {
-                //States = PlayerState.Collect;
-                if (SelectedBomb.GetComponent<Collecting>() == null)
-                {
-                    return;
-                }
-                ThrowBomb = SelectedBomb.GetComponent<Collecting>().Collect(CollectableObject);
+                CollectSelectedBomb();
             }
+        }
+
+        private void CollectSelectedBomb()
+        {
+            if (SelectedBomb.GetComponent<Collecting>() == null)
+            {
+                return;
+            }
+            ThrowBomb = SelectedBomb.GetComponent<Collecting>().Collect(CollectableObject);
         }
 
         // responsible for player movement 
@@ -203,7 +214,7 @@ namespace Controllers.Player
         // completely stops player
         private void StopPlayer()
         {
-            _playerRigidbody2D.velocity = float2.zero;
+            _playerRigidbody2D.velocity = Vector2.zero;
         }
 
         internal void IsReadyToPlay(bool condition)

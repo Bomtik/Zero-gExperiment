@@ -22,13 +22,45 @@ namespace Controllers.Weapon
         private float _distance;
         private Vector2 _direction;
         private bool _facingRight;
+        private PlayerMovementController player;
+        private GameObject _hitObject;
 
         #endregion
         #endregion
 
+        private void Awake()
+        {
+            player = FindObjectOfType<PlayerMovementController>();
+        }
         void Update()
         {
+            HandleInput();
             Shoot();
+        }
+
+        private bool HandleInput()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (Input.GetButton("Up"))
+                {
+                    _direction = Vector2.up;
+                }
+                else if (Input.GetButton("Down"))
+                {
+                    _direction = Vector2.down;
+                }
+                else if (Input.GetButton("Left"))
+                {
+                    _direction = Vector2.left;
+                }
+                else if (Input.GetButton("Right"))
+                {
+                    _direction = Vector2.right;
+                }
+                return true;
+            }
+            return false;
         }
 
         private void Shoot()
@@ -55,57 +87,38 @@ namespace Controllers.Weapon
                 transform.rotation = Quaternion.Euler(0, 0, RotZ + 180);
             }
 
-            if (Input.GetMouseButtonDown(0) && PlayerMovementController.States is not PlayerState.Controlling)
+            if (HandleInput())
             {
-                if (Input.GetButton("Up"))
-                {
-                    _direction = Vector2.up;
-                }
-                else if (Input.GetButton("Down"))
-                {
-                    _direction = Vector2.down;
-                }
-                else if (Input.GetButton("Left"))
-                {
-                    _direction = Vector2.left;
-                }
-                else if (Input.GetButton("Right"))
-                {
-                    _direction = Vector2.right;
-                }
-                else
-                {
-                    //_direction = Vector2.zero;
-                }
+                var hitCast = Physics2D.Raycast(gunPoint.position, _rotationDegree);
+                var trail = Instantiate(bulletTrail, gunPoint.position, transform.rotation);
+                var trailScript = trail.GetComponent<BulletTrail>();
 
-                var Hit = Physics2D.Raycast(gunPoint.position, _rotationDegree);
-                var Trail = Instantiate(bulletTrail, gunPoint.position, transform.rotation);
-                var TrailScript = Trail.GetComponent<BulletTrail>();
-
-                if (Hit.collider != null)
+                if (hitCast.collider != null)
                 {
-                    TrailScript.SetTargetPosition(Hit.point);
-                    ChaosActivate(Hit.collider.gameObject, _direction);
+                    trailScript.SetTargetPosition(hitCast.point);
+                    _hitObject = hitCast.collider.gameObject;
+                    if (!_hitObject.GetComponent<ChaosControl>().IsShooting)
+                    {
+                        ChaosActivate(_hitObject, _direction);
+                    }
                 }
 
                 else
                 {
-                    TrailScript.SetTargetPosition(_mousePos);
-                    StartCoroutine(DestoryTrail());
-                }
-
-                IEnumerator DestoryTrail()
-                {
-                    yield return new WaitForSeconds(10f);
-                    Destroy(Trail);
+                    trailScript.SetTargetPosition(_mousePos);
+                    StartCoroutine(DestoryTrail(trail));
                 }
             }
+        }
+        IEnumerator DestoryTrail(GameObject trail)
+        {
+            yield return new WaitForSeconds(10f);
+            Destroy(trail);
         }
 
         // Flipping the player when switching movement direction
         private void Flip()
         {
-            GameObject player = FindObjectOfType<PlayerMovementController>().gameObject;
             Vector3 LocalScale = player.transform.localScale;
             _facingRight = !_facingRight;
             LocalScale.x *= -1f;
@@ -117,8 +130,10 @@ namespace Controllers.Weapon
             if (control.CompareTag("Controllable"))
             {
                 PlayerMovementController.States = PlayerState.Controlling;
-                control.GetComponent<ChaosControl>().Direction = direction;
-                control.GetComponent<ChaosControl>().Shoot = true;
+                var chaosControl = control.GetComponent<ChaosControl>();
+                if (chaosControl == null) { return; }
+                chaosControl.Direction = direction;
+                chaosControl.IsShooting = true;
             }
         }
     }

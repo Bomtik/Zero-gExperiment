@@ -10,6 +10,7 @@ TagManager:
   - Controllable
   - DoublePlatform
   - Acid
+  - Button
   layers:
   - Default
   - TransparentFX
