@@ -97,6 +97,10 @@ namespace Controllers.Weapon
                 {
                     trailScript.SetTargetPosition(hitCast.point);
                     _hitObject = hitCast.collider.gameObject;
+                    if (!_hitObject.TryGetComponent<ChaosControl>(out ChaosControl chaosControl))
+                    {
+                        return;
+                    }
                     if (!_hitObject.GetComponent<ChaosControl>().IsShooting)
                     {
                         ChaosActivate(_hitObject, _direction);

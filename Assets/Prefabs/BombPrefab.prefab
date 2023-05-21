@@ -41,6 +41,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 8577299050889484147}
     m_Modifications:
     - target: {fileID: 1885590827601232983, guid: 189097e18370619468d867cacc04da5c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885590827601232983, guid: 189097e18370619468d867cacc04da5c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885590827601232983, guid: 189097e18370619468d867cacc04da5c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d60d8b70e4d4d6e41a9b439ab7f598ea, type: 3}
@@ -146,7 +154,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.29, y: 0.37}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.29, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -169,6 +177,14 @@ PrefabInstance:
       propertyPath: itemToCollect
       value: 
       objectReference: {fileID: 7037468046705208689}
+    - target: {fileID: 1885590827601232983, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
+      propertyPath: m_Size.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885590827601232983, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
+      propertyPath: m_Size.y
+      value: 0.37
+      objectReference: {fileID: 0}
     - target: {fileID: 1885590827601232983, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
       propertyPath: m_Sprite
       value: 

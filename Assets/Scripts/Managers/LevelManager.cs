@@ -10,10 +10,6 @@ namespace Managers
     {
         #region Self Variables
 
-        #region Public Variables
-
-        #endregion
-
         #region Serialized Variables
 
         [SerializeField] private int totalLevelCount, levelID;
@@ -22,8 +18,6 @@ namespace Managers
         #endregion
 
         #region Private Variables
-
-        private CD_Level _levelData;
 
         private OnLevelLoaderCommand _levelLoaderCommand;
         private OnLevelDestroyerCommand _levelDestroyerCommand;
@@ -34,7 +28,6 @@ namespace Managers
 
         private void Awake()
         {
-            _levelData = GetLevelData();
             levelID = GetActiveLevel();
 
             Init();
@@ -52,8 +45,6 @@ namespace Managers
 
             return 0;
         }
-
-        private CD_Level GetLevelData() => Resources.Load<CD_Level>("Data/CD_Level");
 
         private void Init()
         {
