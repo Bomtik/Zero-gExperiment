@@ -61,7 +61,6 @@ namespace Managers
         {
             CoreGameSignals.Instance.onLevelInitialize += _levelLoaderCommand.Execute;
             CoreGameSignals.Instance.onClearActiveLevel += _levelDestroyerCommand.Execute;
-            CoreGameSignals.Instance.onNextLevel += OnNextLevel;
             CoreGameSignals.Instance.onRestartLevel += OnRestartLevel;
             CoreGameSignals.Instance.onGetLevelValue += OnGetLevelValue;
         }
@@ -70,7 +69,6 @@ namespace Managers
         {
             CoreGameSignals.Instance.onLevelInitialize -= _levelLoaderCommand.Execute;
             CoreGameSignals.Instance.onClearActiveLevel -= _levelDestroyerCommand.Execute;
-            CoreGameSignals.Instance.onNextLevel -= OnNextLevel;
             CoreGameSignals.Instance.onRestartLevel -= OnRestartLevel;
             CoreGameSignals.Instance.onGetLevelValue -= OnGetLevelValue;
         }

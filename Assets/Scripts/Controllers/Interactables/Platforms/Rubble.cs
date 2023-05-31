@@ -18,6 +18,7 @@ public class Rubble : MonoBehaviour, IHittable
             {
                 ActivateRubble(rubble1, Vector2.left);
                 ActivateRubble(rubble2, Vector2.right);
+                transform.DetachChildren();
             }
             Destroy(gameObject);
         }
