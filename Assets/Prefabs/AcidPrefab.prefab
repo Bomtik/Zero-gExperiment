@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: itemToCollect
       value: 
       objectReference: {fileID: 3550468871053047373}
+    - target: {fileID: 983359582237264893, guid: 310c970940fc17f41a3a502d74d801cf, type: 3}
+      propertyPath: collectableItem
+      value: 
+      objectReference: {fileID: 3550468871053047373}
     - target: {fileID: 1885590827601232983, guid: 310c970940fc17f41a3a502d74d801cf, type: 3}
       propertyPath: m_Size.x
       value: 0.24
@@ -137,6 +141,18 @@ PrefabInstance:
     - target: {fileID: 1331136643889354236, guid: d703b30b0ecd95549a9404786ac8c227, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331136643889354236, guid: d703b30b0ecd95549a9404786ac8c227, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331136643889354236, guid: d703b30b0ecd95549a9404786ac8c227, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331136643889354236, guid: d703b30b0ecd95549a9404786ac8c227, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1885590827601232983, guid: d703b30b0ecd95549a9404786ac8c227, type: 3}
       propertyPath: m_Size.x

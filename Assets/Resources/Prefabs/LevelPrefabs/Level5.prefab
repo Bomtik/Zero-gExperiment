@@ -7082,6 +7082,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigRubble (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5851373178063152992, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539979181571605194, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298651333206074772, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025713320666995930, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
 --- !u!4 &2860166257419126116 stripped
@@ -7214,6 +7230,22 @@ PrefabInstance:
     - target: {fileID: 4613280568674572975, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
       propertyPath: m_Name
       value: BigRubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851373178063152992, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539979181571605194, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298651333206074772, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025713320666995930, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
@@ -7452,6 +7484,22 @@ PrefabInstance:
     - target: {fileID: 4613280568674572975, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
       propertyPath: m_Name
       value: BigRubble (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5851373178063152992, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539979181571605194, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298651333206074772, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025713320666995930, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69fe60e09126e5740b0312148beb7136, type: 3}

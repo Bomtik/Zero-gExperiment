@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 2077408406913560127}
   - component: {fileID: 8279727571463808542}
   - component: {fileID: 1194683360003930118}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rubble (2)
   m_TagString: Controllable
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5033760899272031661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9033383723819427413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 7768572666509154067}
   - component: {fileID: 485115325190676023}
   - component: {fileID: 8018687333606901826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rubble (3)
   m_TagString: Controllable
   m_Icon: {fileID: 0}

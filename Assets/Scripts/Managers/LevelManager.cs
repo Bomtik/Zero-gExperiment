@@ -8,6 +8,7 @@ namespace Managers
 {
     public class LevelManager : MonoBehaviour
     {
+        public int levelValue;
         #region Self Variables
 
         #region Serialized Variables
@@ -43,7 +44,7 @@ namespace Managers
                 }
             }
 
-            return 0;
+            return levelValue;
         }
 
         private void Init()
