@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5197980038714756737}
   - component: {fileID: 9149088331360939366}
   - component: {fileID: 5182728878934502876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigRubble
   m_TagString: DoublePlatform
   m_Icon: {fileID: 0}

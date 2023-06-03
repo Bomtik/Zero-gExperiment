@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data:
     MovementData:
-      ForwardSpeed: 10
+      ForwardSpeed: 7
       JumpVelocity: 20
       StatePlayer: 0
