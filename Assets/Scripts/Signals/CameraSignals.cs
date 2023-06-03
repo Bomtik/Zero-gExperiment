@@ -5,5 +5,5 @@ using UnityEngine.Events;
 
 public class CameraSignals : MonoBehaviour
 {
-    public UnityAction onSetCamera
+    public UnityAction onSetCameraTarget = delegate { };
 }

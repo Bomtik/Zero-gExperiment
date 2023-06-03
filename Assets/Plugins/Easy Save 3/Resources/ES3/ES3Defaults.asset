@@ -31,8 +31,8 @@ MonoBehaviour:
     assemblyNames:
     - Assembly-CSharp-firstpass
     - Assembly-CSharp
-    - Sirenix.OdinInspector.CompatibilityLayer
     - Cinemachine
+    - Sirenix.OdinInspector.CompatibilityLayer
     - PsdPlugin
     - PPv2URPConverters
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
