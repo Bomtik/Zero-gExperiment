@@ -1,5 +1,6 @@
 using System;
 using Cinemachine;
+using DG.Tweening;
 using Signals;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,6 +34,7 @@ namespace Managers
         {
             CameraSignals.Instance.onSetCameraTarget += OnSetCameraTarget;
             CoreGameSignals.Instance.onReset += OnReset;
+            CoreGameSignals.Instance.onStageAreaEntered += OnStageAreaEntered;
         }
 
         private void OnSetCameraTarget()
@@ -43,7 +45,8 @@ namespace Managers
         private void UnSubscribeEvents()
         {
             CameraSignals.Instance.onSetCameraTarget -= OnSetCameraTarget;
-            CoreGameSignals.Instance.onReset += OnReset;
+            CoreGameSignals.Instance.onReset -= OnReset;
+            CoreGameSignals.Instance.onStageAreaEntered -= OnStageAreaEntered;
         }
 
         private void OnDisable()
@@ -56,6 +59,10 @@ namespace Managers
             GetTheInitialPosition();
         }
 
+        private void OnStageAreaEntered(Vector3 cameraPos)
+        {
+            transform.DOMove(cameraPos, 0.5f);
+        }
         private void GetTheInitialPosition()
         {
             _initialPosition = transform.localPosition;

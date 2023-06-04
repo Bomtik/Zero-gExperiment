@@ -11,6 +11,8 @@ TagManager:
   - DoublePlatform
   - Acid
   - Button
+  - StageSwitch
+  - StageEnd
   layers:
   - Default
   - TransparentFX

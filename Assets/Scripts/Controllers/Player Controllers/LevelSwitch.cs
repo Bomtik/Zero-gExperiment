@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Interfaces.Hittable;
 using Signals;
 using System.Collections;
@@ -6,6 +7,9 @@ using UnityEngine;
 
 public class LevelSwitch : MonoBehaviour, IHittable
 {
+    [SerializeField] private Vector3 cameraPos;
+    [SerializeField] private GameObject door;
+    [SerializeField] private float target;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,12 +21,13 @@ public class LevelSwitch : MonoBehaviour, IHittable
 
     public void WhenHit(GameObject other)
     {
-        if (gameObject.CompareTag("CameraSwitch"))
+        if (gameObject.CompareTag("StageSwitch"))
         {
-            CoreGameSignals.Instance.onStageAreaEntered?.Invoke();
+            door.transform.DOMoveY(target, 1);
+            CoreGameSignals.Instance.onStageAreaEntered?.Invoke(cameraPos);
         }
 
-        else if (gameObject.CompareTag("LevelSwitch"))
+        else if (gameObject.CompareTag("StageEnd"))
         {
             CoreGameSignals.Instance.onLevelSuccessful?.Invoke();
 
