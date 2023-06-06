@@ -13,6 +13,7 @@ TagManager:
   - Button
   - StageSwitch
   - StageEnd
+  - Melt
   layers:
   - Default
   - TransparentFX

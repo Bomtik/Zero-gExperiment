@@ -3,6 +3,7 @@ using Commands;
 using Commands.Level;
 using Data.UnityObjects;
 using Signals;
+using System.Collections;
 using UnityEngine;
 
 namespace Managers
@@ -65,6 +66,7 @@ namespace Managers
             CoreGameSignals.Instance.onClearActiveLevel += _levelDestroyerCommand.Execute;
             CoreGameSignals.Instance.onRestartLevel += OnRestartLevel;
             CoreGameSignals.Instance.onGetLevelValue += OnGetLevelValue;
+            CoreGameSignals.Instance.onNextLevel += OnNextLevel;
         }
 
         private void UnSubscribeEvents()
@@ -73,6 +75,7 @@ namespace Managers
             CoreGameSignals.Instance.onClearActiveLevel -= _levelDestroyerCommand.Execute;
             CoreGameSignals.Instance.onRestartLevel -= OnRestartLevel;
             CoreGameSignals.Instance.onGetLevelValue -= OnGetLevelValue;
+            CoreGameSignals.Instance.onNextLevel -= OnNextLevel;
         }
 
         private void OnDisable()
@@ -88,11 +91,16 @@ namespace Managers
         private void OnNextLevel()
         {
             levelID++;
-            CoreGameSignals.Instance.onClearActiveLevel?.Invoke();
-            CoreGameSignals.Instance.onReset?.Invoke();
+            //CoreGameSignals.Instance.onReset?.Invoke();
             CoreGameSignals.Instance.onLevelInitialize?.Invoke(levelID % totalLevelCount);
+            StartCoroutine(DestroyLevelInit());
         }
 
+        IEnumerator DestroyLevelInit()
+        {
+            yield return new WaitForSeconds(1);
+            CoreGameSignals.Instance.onClearActiveLevel?.Invoke();
+        }
         private void OnRestartLevel()
         {
             CoreGameSignals.Instance.onClearActiveLevel?.Invoke();

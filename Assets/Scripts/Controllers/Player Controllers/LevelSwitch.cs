@@ -3,13 +3,14 @@ using Interfaces.Hittable;
 using Signals;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class LevelSwitch : MonoBehaviour, IHittable
 {
     [SerializeField] private Vector3 cameraPos;
     [SerializeField] private GameObject door;
-    [SerializeField] private float target;
+    [SerializeField] private Transform target;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,14 +24,22 @@ public class LevelSwitch : MonoBehaviour, IHittable
     {
         if (gameObject.CompareTag("StageSwitch"))
         {
-            door.transform.DOMoveY(target, 1);
-            CoreGameSignals.Instance.onStageAreaEntered?.Invoke(cameraPos);
+            ChangePositions();
         }
 
         else if (gameObject.CompareTag("StageEnd"))
         {
-            CoreGameSignals.Instance.onLevelSuccessful?.Invoke();
+            ChangePositions();
+            CoreGameSignals.Instance.onNextLevel?.Invoke();
+        }
+    }
 
+    private void ChangePositions()
+    {
+        CoreGameSignals.Instance.onStageAreaEntered?.Invoke(cameraPos);
+        if (door != null)
+        {
+            door.transform.DOMove(target.position, 1);
         }
     }
 }

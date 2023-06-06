@@ -33,6 +33,10 @@ public class Explosive : MonoSingleton<Explosive>, IHittable
     public void WhenHit(GameObject other)
     {
         //Play particle and destroy bomb
+        if (other.CompareTag("Melt") && gameObject.CompareTag("Acid"))
+        {
+            Destroy(other.gameObject);
+        }
         Destroy(gameObject);
     }
 
