@@ -1,0 +1,10 @@
+diff a/UserSettings/Layouts/default-2021.dwlt b/UserSettings/Layouts/default-2021.dwlt	(rejected hunks)
+@@ -118,7 +118,7 @@
+   m_MinSize: {x: 300, y: 200}
+   m_MaxSize: {x: 24288, y: 16192}
+   vertical: 1
+-  controlID: 71
++  controlID: 144
+ --- !u!114 &6
+ MonoBehaviour:
+   m_ObjectHideFlags: 52
