@@ -1,0 +1,10 @@
+diff a/Assets/Prefabs/Player.prefab b/Assets/Prefabs/Player.prefab	(rejected hunks)
+@@ -12,7 +12,7 @@
+   - component: {fileID: 279292826337376590}
+   - component: {fileID: 279292826337376589}
+   - component: {fileID: 279292826337376591}
+-  - component: {fileID: 279292826337376588}
++  - component: {fileID: 363481117814009817}
+   m_Layer: 2
+   m_Name: Player
+   m_TagString: Player
