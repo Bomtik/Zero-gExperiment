@@ -285,8 +285,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: BombCollecter
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1885590827601232983, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
 --- !u!4 &8253916211022074499 stripped
 Transform:

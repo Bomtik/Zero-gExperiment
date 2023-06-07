@@ -7,7 +7,7 @@ using Extensions;
 
 public class Explosive : MonoSingleton<Explosive>, IHittable
 {
-    Animator anim;
+    public Animator anim;
     public Rigidbody2D RigidBody;
     public ExplosiveState State;
     public LineRenderer LineRenderer;
@@ -39,7 +39,6 @@ public class Explosive : MonoSingleton<Explosive>, IHittable
         {
             Destroy(other.gameObject);
         }
-        anim.SetTrigger("boom");
         Destroy(gameObject);
     }
 
