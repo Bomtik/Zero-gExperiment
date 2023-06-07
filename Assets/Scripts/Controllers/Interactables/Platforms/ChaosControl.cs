@@ -4,10 +4,16 @@ using Controllers.Player;
 
 public class ChaosControl : MonoBehaviour
 {
+    Animator anim;
     public bool IsShooting;
     public Vector2 Direction;
 
     private RaycastHit2D raycastHit2D;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -30,6 +36,7 @@ public class ChaosControl : MonoBehaviour
 
         var targetPosition = raycastHit2D.point - new Vector2(Direction.x * 0.5f, Direction.y * 0.5f);
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * 3);
+        anim.SetBool("isMoving", true);
 
         if ((Vector2)transform.position == targetPosition)
         {
@@ -39,6 +46,7 @@ public class ChaosControl : MonoBehaviour
             }
             SetPlayerWalkingState();
             IsShooting = false;
+            anim.SetBool("isMoving", false);
         }
     }
     private void PerformRaycast()

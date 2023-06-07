@@ -7,6 +7,7 @@ namespace Controllers.Player
 {
     public class PlayerMovementController : MonoBehaviour
     {
+        Animator anim;
         #region Self Variables
         #region Private Variables
 
@@ -34,6 +35,7 @@ namespace Controllers.Player
         // set what needs to be set
         private void Awake()
         {
+            anim = GetComponent<Animator>();
             InitializeComponents();
         }
 
@@ -107,6 +109,11 @@ namespace Controllers.Player
                 States = PlayerState.Jumping;
                 _jumpPressedRemember = 0.2f;
                 _allowJumping = true;
+                anim.SetBool("jump", true);
+            }
+            else if (States != PlayerState.Jumping)
+            {
+                anim.SetBool("jump", false);
             }
         }
 

@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 2077408406913560127}
   - component: {fileID: 8279727571463808542}
   - component: {fileID: 1194683360003930118}
+  - component: {fileID: 3489984627911453135}
   m_Layer: 6
   m_Name: Rubble (2)
   m_TagString: Controllable
@@ -270,6 +271,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsShooting: 0
   Direction: {x: 0, y: 0}
+--- !u!95 &3489984627911453135
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5851373178063152992}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a08ec48358d31f34c83c4d1414e240ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7539979181571605194
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +365,7 @@ GameObject:
   - component: {fileID: 7768572666509154067}
   - component: {fileID: 485115325190676023}
   - component: {fileID: 8018687333606901826}
+  - component: {fileID: 3129426442031577225}
   m_Layer: 6
   m_Name: Rubble (3)
   m_TagString: Controllable
@@ -459,3 +481,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsShooting: 0
   Direction: {x: 0, y: 0}
+--- !u!95 &3129426442031577225
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9025713320666995930}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a08ec48358d31f34c83c4d1414e240ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
