@@ -1,6 +1,7 @@
 using UnityEngine;
 using Data.ValueObjects;
 using Enums;
+using Signals;
 
 namespace Controllers.Player
 {
@@ -18,6 +19,7 @@ namespace Controllers.Player
         private float _jumpPressedRemember, _groundedRemember, _move;
         private Vector2 _velocity;
         public static PlayerState States;
+        public static Transform PlayerPosition;
 
         #endregion
 
@@ -74,6 +76,15 @@ namespace Controllers.Player
             HandleJumpInput();
             HandleShootInput();
             HandleCollectInput();
+            HandleRestartInput();
+        }
+
+        private void HandleRestartInput()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                CoreGameSignals.Instance.onRestartLevel?.Invoke();
+            }
         }
 
         private void HandleJumpInput()
@@ -224,8 +235,7 @@ namespace Controllers.Player
 
         internal void OnReset()
         {
-            StopPlayer();
-            _isReadyToPlay = false;
+            transform.position = PlayerPosition.position;
         }
     }
 }
