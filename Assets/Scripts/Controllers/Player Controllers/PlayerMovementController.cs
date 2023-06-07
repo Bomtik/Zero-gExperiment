@@ -56,6 +56,11 @@ namespace Controllers.Player
         // works for rigidbody
         private void FixedUpdate()
         {
+            if (Input.GetMouseButtonDown(0))
+            {
+                anim.SetTrigger("hit");
+            }
+
             if (!_isReadyToPlay)
             {
                 StopPlayer();

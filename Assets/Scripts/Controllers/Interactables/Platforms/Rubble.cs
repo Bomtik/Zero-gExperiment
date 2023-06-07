@@ -6,15 +6,10 @@ using Interfaces.Hittable;
 public class Rubble : MonoBehaviour, IHittable
 {
     Animator anim;
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
     [SerializeField] private GameObject rubble1, rubble2, stage;
 
     private void Awake()
     {
-
         anim = GetComponent<Animator>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
