@@ -5,6 +5,9 @@ using Interfaces.Hittable;
 
 public class Rubble : MonoBehaviour, IHittable
 {
+    private void Update()
+    {
+    }
     [SerializeField] private GameObject rubble1, rubble2;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -22,6 +25,7 @@ public class Rubble : MonoBehaviour, IHittable
             }
             Destroy(gameObject);
         }
+        
     }
 
     private void ActivateRubble(GameObject rubble, Vector2 direction)

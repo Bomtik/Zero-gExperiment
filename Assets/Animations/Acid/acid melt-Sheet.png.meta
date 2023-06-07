@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef9b7cbc5a0f26d4d91d7bde9f427fca
+guid: 1bce3cab9298bed40bd54ecb06cd89f8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 370
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,34 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walking-Sheet-Sheet_0
+      name: acid melt-Sheet_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 74
-        width: 384
-        height: 400
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64e11887c11dfc64b8e9eb259b6e292d
-      internalID: 2129445204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walking-Sheet-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 58
-        width: 384
-        height: 400
+        x: 0
+        y: 1580
+        width: 520
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fb8e902ecb017543bb2081827ed4c07
-      internalID: -1958017029
+      spriteID: a89e16c2170587046b7f6385ee3f19ec
+      internalID: -1136338685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking-Sheet-Sheet_2
+      name: acid melt-Sheet_1
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 74
-        width: 384
-        height: 400
+        x: 0
+        y: 1080
+        width: 520
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba22268675addc644a55d612f1337351
-      internalID: -794200429
+      spriteID: 3705e76a83c3e8b488c0af8dc05a8b66
+      internalID: 1215998499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking-Sheet-Sheet_3
+      name: acid melt-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1551
-        y: 59
-        width: 368
-        height: 400
+        x: 0
+        y: 580
+        width: 520
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +160,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 796d322ec8d7a564ba3050041c3a1ea1
-      internalID: -134098991
+      spriteID: 081e0fbc5a5d7184396b2c8fbdf0f3bd
+      internalID: -1217356911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acid melt-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 520
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323ba5cac709d6a48be6db936c7e6b24
+      internalID: 1292960093
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walking-Sheet-Sheet_2: -794200429
-      walking-Sheet-Sheet_3: -134098991
-      walking-Sheet-Sheet_0: 2129445204
-      walking-Sheet-Sheet_1: -1958017029
+      acid melt-Sheet_2: -1217356911
+      acid melt-Sheet_0: -1136338685
+      acid melt-Sheet_3: 1292960093
+      acid melt-Sheet_1: 1215998499
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

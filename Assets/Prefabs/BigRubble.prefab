@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5197980038714756737}
   - component: {fileID: 9149088331360939366}
   - component: {fileID: 5182728878934502876}
+  - component: {fileID: -4911524994988625822}
   m_Layer: 6
   m_Name: BigRubble
   m_TagString: DoublePlatform
@@ -143,6 +144,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rubble1: {fileID: 9025713320666995930}
   rubble2: {fileID: 5851373178063152992}
+--- !u!95 &-4911524994988625822
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613280568674572975}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0700ec2fad87dc54595ff7d74487d988, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5851373178063152992
 GameObject:
   m_ObjectHideFlags: 0

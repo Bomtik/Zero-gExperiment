@@ -6,6 +6,7 @@ namespace Controllers.Player
 {
     public class PlayerMovementController : MonoBehaviour
     {
+
         Animator anim;
         #region Self Variables
         #region Private Variables
@@ -221,7 +222,7 @@ namespace Controllers.Player
         // completely stops player
         private void StopPlayer()
         {
-            _playerRigidbody2D.velocity = Vector2.zero;
+               _playerRigidbody2D.velocity = Vector2.zero;
         }
 
         internal void IsReadyToPlay(bool condition)

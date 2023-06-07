@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6382774570513746044}
   - component: {fileID: 6382774570513746042}
   - component: {fileID: 6382774570513746041}
+  - component: {fileID: 5457959807924441514}
   - component: {fileID: 6382774570513746043}
   - component: {fileID: 6809245659034853101}
   - component: {fileID: 6589915241307748328}
@@ -70,6 +71,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageValue: 0
   movementController: {fileID: 6382774570513746042}
+--- !u!114 &5457959807924441514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6382774570513746046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba569e33487196947acac3a2dae12468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &6382774570513746043
 Rigidbody2D:
   serializedVersion: 4
