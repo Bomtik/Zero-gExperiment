@@ -9,6 +9,7 @@ namespace Controllers.Weapon
 {
     public class WeaponController : MonoBehaviour
     {
+        Animator anim;
         #region Self Vars
 
         #region Serialzed Vars
@@ -30,6 +31,7 @@ namespace Controllers.Weapon
 
         private void Awake()
         {
+            anim = GetComponent<Animator>();
             player = FindObjectOfType<PlayerMovementController>();
         }
         void Update()
@@ -42,6 +44,7 @@ namespace Controllers.Weapon
         {
             if (Input.GetMouseButtonDown(0))
             {
+                anim.SetTrigger("pew pew");
                 if (Input.GetButton("Up"))
                 {
                     _direction = Vector2.up;
