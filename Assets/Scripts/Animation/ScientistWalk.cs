@@ -18,7 +18,7 @@ public class ScientistWalk : MonoBehaviour {
 	void Update () {
 		dirX = Input.GetAxisRaw ("Horizontal") * moveSpeed * Time.deltaTime;
 
-		transform.position = new Vector2 (transform.position.x + dirX, transform.position.y);
+		//transform.position = new Vector2 (transform.position.x + dirX, transform.position.y);
 
 		if (dirX != 0 && !anim.GetCurrentAnimatorStateInfo(0).IsName("shoot")) {
 			anim.SetBool ("isWalking", true);

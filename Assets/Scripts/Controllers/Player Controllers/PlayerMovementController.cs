@@ -2,25 +2,25 @@ using UnityEngine;
 using Data.ValueObjects;
 using Enums;
 using Signals;
+using Sirenix.OdinInspector;
 
 namespace Controllers.Player
 {
     public class PlayerMovementController : MonoBehaviour
     {
-
-        Animator anim;
         #region Self Variables
         #region Private Variables
 
         [SerializeField] private LayerMask _platformLayerMask;
         private bool _isReadyToPlay = true;
+        private Animator anim;
         private Rigidbody2D _playerRigidbody2D;
         private BoxCollider2D _boxCollider2D;
         private MovementData _data;
         private bool _allowJumping;
-        private float _jumpPressedRemember, _groundedRemember, _move;
+        [ShowInInspector]private float _jumpPressedRemember, _groundedRemember, _move;
         private Vector2 _velocity;
-        public static PlayerState States;
+        [ShowInInspector]public static PlayerState States;
         public static Transform PlayerPosition;
 
         #endregion
@@ -36,7 +36,6 @@ namespace Controllers.Player
         // set what needs to be set
         private void Awake()
         {
-            anim = GetComponent<Animator>();
             InitializeComponents();
         }
 
@@ -45,6 +44,7 @@ namespace Controllers.Player
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
             _boxCollider2D = GetComponent<BoxCollider2D>();
             States = PlayerState.Idle;
+            anim = GetComponent<Animator>();
         }
 
         // get player movement data
@@ -97,6 +97,8 @@ namespace Controllers.Player
 
             if (!Grounded() && !(States is PlayerState.Shooting))
             {
+                anim.SetBool("isWalking", false);
+                anim.SetBool("jump", true);
                 States = PlayerState.Jumping;
             }
 
@@ -110,7 +112,6 @@ namespace Controllers.Player
                 States = PlayerState.Jumping;
                 _jumpPressedRemember = 0.2f;
                 _allowJumping = true;
-                anim.SetBool("jump", true);
             }
             else if (States != PlayerState.Jumping)
             {
@@ -160,6 +161,9 @@ namespace Controllers.Player
             if (States is PlayerState.Walking || States is PlayerState.Jumping || States is PlayerState.Controlling)
             {
                 _move = Input.GetAxis("Horizontal");
+
+                if (_move == 0) { anim.SetBool("isWalking", false); }
+                else { anim.SetBool("isWalking", true); }
                 _playerRigidbody2D.velocity = new Vector2(_move * _data.ForwardSpeed, _playerRigidbody2D.velocity.y);
 
                 if (_allowJumping && _jumpPressedRemember > 0 && _groundedRemember > 0)

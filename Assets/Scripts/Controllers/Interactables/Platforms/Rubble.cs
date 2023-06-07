@@ -41,6 +41,7 @@ public class Rubble : MonoBehaviour, IHittable
     IEnumerator DelayDestroy()
     {
         yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
     }
     private void ActivateRubble(GameObject rubble, Vector2 direction)
     {
