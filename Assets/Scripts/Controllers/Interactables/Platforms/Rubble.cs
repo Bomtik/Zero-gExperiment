@@ -20,7 +20,6 @@ public class Rubble : MonoBehaviour, IHittable
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        anim.SetTrigger("boom");
         WhenHit(collision.gameObject);
     }
     public void WhenHit(GameObject other)
