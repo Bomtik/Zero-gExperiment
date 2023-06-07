@@ -90,7 +90,6 @@ namespace Managers
 
         private void OnReset()
         {
-            StageValue = 0;
             movementController.OnReset();
         }
     }

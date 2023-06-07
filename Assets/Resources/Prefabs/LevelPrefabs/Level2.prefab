@@ -5065,7 +5065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3525466684347071726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.7, y: 0.67, z: 1}
+  m_LocalPosition: {x: 9.08, y: 0.67, z: 1}
   m_LocalScale: {x: 0.5, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5111,7 +5111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ae328ef2c8e2b488f67b53a812fc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPos: {x: 46.25, y: -9.75, z: -10}
+  cameraPos: {x: 50.25, y: -9.75, z: -10}
   door: {fileID: 7516286343053565051}
   target: {fileID: 6950911940682732929}
 --- !u!1 &3527533246427830255
@@ -17802,8 +17802,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7799523316374997015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 1}
-  m_LocalScale: {x: 5.237, y: 0.27791414, z: 1}
+  m_LocalPosition: {x: -0.86, y: 1.0493, z: 1}
+  m_LocalScale: {x: 0.9819375, y: 1.2130396, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1917335008337484960}
@@ -17913,7 +17913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7807938477069708827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.259863, y: 7.572194, z: 4.2358747}
+  m_LocalPosition: {x: 1.85, y: 0.25, z: 1}
   m_LocalScale: {x: 0.5, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17934,7 +17934,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.22871685}
+  m_Offset: {x: 0.6335629, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -17945,7 +17945,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.1158752, y: 0.07317948}
+  m_Size: {x: 0.29804236, y: 1.2071669}
   m_EdgeRadius: 0
 --- !u!114 &2198903162009868522
 MonoBehaviour:
@@ -17959,7 +17959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ae328ef2c8e2b488f67b53a812fc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPos: {x: 32.25, y: -9.75, z: -10}
+  cameraPos: {x: 68.25, y: -9.75, z: -10}
   door: {fileID: 7799523316374997015}
   target: {fileID: 1917335008337484960}
 --- !u!1 &7978727572600030767
@@ -19857,6 +19857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigRubble (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5182728878934502876, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 7036003068783694497}
     - target: {fileID: 5851373178063152992, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -20474,6 +20478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigRubble (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5182728878934502876, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 7036003068783694497}
     - target: {fileID: 5851373178063152992, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -20552,6 +20560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigRubble
       objectReference: {fileID: 0}
+    - target: {fileID: 5182728878934502876, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 7036003068783694497}
     - target: {fileID: 5851373178063152992, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -20630,6 +20642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigRubble
       objectReference: {fileID: 0}
+    - target: {fileID: 5182728878934502876, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 9203183289979067659}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69fe60e09126e5740b0312148beb7136, type: 3}
 --- !u!4 &6478743389006978854 stripped

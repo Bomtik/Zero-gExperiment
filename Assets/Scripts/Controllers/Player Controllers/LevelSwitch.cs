@@ -39,7 +39,7 @@ public class LevelSwitch : MonoBehaviour, IHittable
         CoreGameSignals.Instance.onStageAreaEntered?.Invoke(cameraPos);
         if (door != null)
         {
-            door.transform.DOMove(target.position, 1);
+            door.transform.DOMove(target.position, 0.5f);
         }
     }
 }

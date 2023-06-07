@@ -6,11 +6,21 @@ using Interfaces.Hittable;
 public class Rubble : MonoBehaviour, IHittable
 {
     Animator anim;
+<<<<<<< HEAD
     private void Start()
     {
         anim = GetComponent<Animator>();
     }
     [SerializeField] private GameObject rubble1, rubble2;
+=======
+    [SerializeField] private GameObject rubble1, rubble2, stage;
+
+    private void Awake()
+    {
+
+        anim = GetComponent<Animator>();
+    }
+>>>>>>> origin/main
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -25,15 +35,21 @@ public class Rubble : MonoBehaviour, IHittable
             {
                 ActivateRubble(rubble1, Vector2.left);
                 ActivateRubble(rubble2, Vector2.right);
-                transform.DetachChildren();
             }
-            Destroy(gameObject);
+
+            anim.SetTrigger("boom");
+            StartCoroutine(DelayDestroy());
         }
         
     }
 
+    IEnumerator DelayDestroy()
+    {
+        yield return new WaitForSeconds(1f);
+    }
     private void ActivateRubble(GameObject rubble, Vector2 direction)
     {
+        rubble.transform.parent = stage.transform;
         rubble.SetActive(true);
         ChaosControl chaosControl = rubble.GetComponent<ChaosControl>();
 

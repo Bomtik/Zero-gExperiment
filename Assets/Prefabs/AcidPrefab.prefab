@@ -321,7 +321,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.24, y: 0.69}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!95 &6769599031103915845
+=======
+--- !u!95 &5367916166153061030
+>>>>>>> origin/main
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -331,7 +335,11 @@ Animator:
   m_GameObject: {fileID: 3550468871053047373}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
+<<<<<<< HEAD
   m_Controller: {fileID: 9100000, guid: b427fd399e9808647a5cf5f05a9e2c64, type: 2}
+=======
+  m_Controller: {fileID: 9100000, guid: 0700ec2fad87dc54595ff7d74487d988, type: 2}
+>>>>>>> origin/main
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

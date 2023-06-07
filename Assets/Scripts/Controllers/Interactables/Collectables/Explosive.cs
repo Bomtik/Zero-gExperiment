@@ -7,6 +7,10 @@ using Extensions;
 
 public class Explosive : MonoSingleton<Explosive>, IHittable
 {
+<<<<<<< HEAD
+=======
+    public Animator anim;
+>>>>>>> origin/main
     public Rigidbody2D RigidBody;
     public ExplosiveState State;
     public LineRenderer LineRenderer;
