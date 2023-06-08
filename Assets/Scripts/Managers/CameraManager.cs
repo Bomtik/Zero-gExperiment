@@ -33,7 +33,7 @@ namespace Managers
         private void SubscribeEvents()
         {
             CameraSignals.Instance.onSetCameraTarget += OnSetCameraTarget;
-            CoreGameSignals.Instance.onReset += OnReset;
+            //CoreGameSignals.Instance.onReset += OnReset;
             CoreGameSignals.Instance.onStageAreaEntered += OnStageAreaEntered;
         }
 
@@ -45,7 +45,7 @@ namespace Managers
         private void UnSubscribeEvents()
         {
             CameraSignals.Instance.onSetCameraTarget -= OnSetCameraTarget;
-            CoreGameSignals.Instance.onReset -= OnReset;
+            //CoreGameSignals.Instance.onReset -= OnReset;
             CoreGameSignals.Instance.onStageAreaEntered -= OnStageAreaEntered;
         }
 

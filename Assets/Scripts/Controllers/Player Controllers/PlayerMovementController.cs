@@ -3,6 +3,8 @@ using Data.ValueObjects;
 using Enums;
 using Signals;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
+using UnityEngine.Rendering.Universal;
 
 namespace Controllers.Player
 {
@@ -18,9 +20,9 @@ namespace Controllers.Player
         private BoxCollider2D _boxCollider2D;
         private MovementData _data;
         private bool _allowJumping;
-        [ShowInInspector]private float _jumpPressedRemember, _groundedRemember, _move;
+        private float _jumpPressedRemember, _groundedRemember, _move;
         private Vector2 _velocity;
-        [ShowInInspector]public static PlayerState States;
+        public static PlayerState States;
         public static Transform PlayerPosition;
 
         #endregion
@@ -41,6 +43,7 @@ namespace Controllers.Player
 
         private void InitializeComponents()
         {
+            PlayerPosition = FindObjectOfType<Light2D>().gameObject.transform;
             _playerRigidbody2D = GetComponent<Rigidbody2D>();
             _boxCollider2D = GetComponent<BoxCollider2D>();
             States = PlayerState.Idle;

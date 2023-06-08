@@ -1,3 +1,4 @@
+using Controllers.Player;
 using DG.Tweening;
 using Interfaces.Hittable;
 using Signals;
@@ -10,7 +11,7 @@ public class LevelSwitch : MonoBehaviour, IHittable
 {
     [SerializeField] private Vector3 cameraPos;
     [SerializeField] private GameObject door;
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform target, savePoint;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,16 +23,15 @@ public class LevelSwitch : MonoBehaviour, IHittable
 
     public void WhenHit(GameObject other)
     {
-        if (gameObject.CompareTag("StageSwitch"))
+        if (gameObject.CompareTag("StageEnd"))
         {
-            ChangePositions();
-        }
-
-        else if (gameObject.CompareTag("StageEnd"))
-        {
-            ChangePositions();
             CoreGameSignals.Instance.onNextLevel?.Invoke();
         }
+        if (savePoint != null)
+        {
+            PlayerMovementController.PlayerPosition = savePoint;
+        }
+        ChangePositions();
     }
 
     private void ChangePositions()

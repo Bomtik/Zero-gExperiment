@@ -104,7 +104,7 @@ namespace Managers
         private void OnRestartLevel()
         {
             CoreGameSignals.Instance.onClearActiveLevel?.Invoke();
-            //CoreGameSignals.Instance.onReset?.Invoke();
+            CoreGameSignals.Instance.onReset?.Invoke();
             CoreGameSignals.Instance.onLevelInitialize?.Invoke(levelID % totalLevelCount);
         }
 
