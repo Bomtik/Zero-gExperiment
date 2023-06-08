@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelValue: 1
-  totalLevelCount: 10
+  totalLevelCount: 5
   levelID: 0
   levelHolder: {fileID: 1928606035}
 --- !u!4 &146346378

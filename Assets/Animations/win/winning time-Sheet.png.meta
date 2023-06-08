@@ -1,0 +1,1706 @@
+fileFormatVersion: 2
+guid: cd755b867e85368449aea8918231fe89
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: winning time-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b558e95ccd57f6342b8493eeb6045236
+      internalID: -10900678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e2fb9b8e132da40bf527fa02588248
+      internalID: 1327992227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030f6b09284eb7248ab8c1e3d5c5009f
+      internalID: 222920743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6249caf1c6efeec44b6572623381e4e2
+      internalID: -367164827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd498fff14f153489c315ec9ecf20a8
+      internalID: -1304386594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5860dbcddfd5251469f5b240c72e8e54
+      internalID: -781424338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e8ea7b2ed943542a5d8420a36b609a
+      internalID: 2072229849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa78511b97e4e504da6d6a46de89b9c0
+      internalID: 1983498855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 3101
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020888f53342e62489ba1aa1845d8293
+      internalID: -456578453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93363c1370aae0342b65754552809174
+      internalID: 570965389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a692053d460d967468606d3a16d6fb26
+      internalID: -914439351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da87fa5e747a394a8f73c26e1c322fa
+      internalID: -818116433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e366344feaa4fb46a943e781eb8802d
+      internalID: 590277485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a425c1185605d4b8e419a9950a79ba
+      internalID: -1572042506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a040dc78b0c654980cc9fcef5ecbe3
+      internalID: 1723977136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8755b00074473af43a763405ec3d53f0
+      internalID: -83938562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a0ac6c03bc7d14cb9ff6437ada46e3
+      internalID: 752739544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 2658
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1233294bc3a2c64f82e31066888b98d
+      internalID: 603736516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973dde1bbc5290548a842a28ad679295
+      internalID: -1746604036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625611a58425be742960cc2323292652
+      internalID: -1117477634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d667610219b065e4189df25028aa4e40
+      internalID: -1302850329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b607a88b5922c4b8cdf9c44d787008
+      internalID: 947011491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e8ed1e7e8f98a4f8339f6340aee3b2
+      internalID: -687447167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fb33c3b4923504e86090962fd7b71c
+      internalID: -37314423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d91bd13ae93112488cc507eb4e5d894
+      internalID: 375491853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9801b89ee3e45f94a9906988bebe4b68
+      internalID: 1185576634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 2215
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38be29288062f264baae909f3ebfe3dd
+      internalID: 1525337675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1013b0f98b787124d9f6ff53866ac86a
+      internalID: 1829201108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c471df49d24084fae5401528e941ad
+      internalID: 1589983839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58efcec57a016844b5b22ce141ec134
+      internalID: -1393280506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f455a3042d3485468210fdee925e70f
+      internalID: 649172985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5433a002e32b6d1429faacae06a7bb1c
+      internalID: -2082610355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8963abfbbd8e594581f5d7e07213760
+      internalID: -142582435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00dda2240c3fe4d418649263788fe2df
+      internalID: -1133882038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfca127ed7c7c6e4c8c8fe02f95d361e
+      internalID: -435128511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 1772
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e1956139d0c1445a95a6cfac838898
+      internalID: -1008712324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1506763c085c448a565515e893f12d
+      internalID: 489541805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9d8952bc767e248be91f5973b89473
+      internalID: -1028863319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06917f03b3ac76e41b109b2b267c4ca9
+      internalID: -1535946444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9bedfe7c3048246a3674e3c18312e5
+      internalID: 1104269431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b24873eddd90fc4d9223ff696ead2cc
+      internalID: 1588662597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c1d520b9b8b7b44a5021195c8eec3b
+      internalID: 1189328531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6de59ca67d749b4c8fff37782ffa8f0
+      internalID: -493449314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5896162a96b1343bbd5970cb9a93d1
+      internalID: 1288499241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 1329
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622cfc85aff981b42a3cec22ad7c9691
+      internalID: -1183920716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdd950c2cd790240bd01eee36b3c37b
+      internalID: 2133150872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e999d640bfda4c948bcaa9a899d27b44
+      internalID: -178371980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfacc2eaf546504d92b9f528e6b2554
+      internalID: -1802085208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f017367844e412f4b93aa9ba23f50934
+      internalID: -615478926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd29434f1ce07546935818cd38eb7fb
+      internalID: 695855013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922226ed459424c42a7a6413041c6ed8
+      internalID: -206946333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1528c8d10daedc743a062975ef5fca3d
+      internalID: -916464452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53495454d55e294190875df4e1cbc22
+      internalID: -946793637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 886
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97bf03874f9e074b8f5f848cd6b6932
+      internalID: -927517365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c163ec4b2bbe98c418e766c7a3526d28
+      internalID: -1541671519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7747951579972fd4ea3ec28eea754b46
+      internalID: -844965772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4366b092ae5f946abfee53bde13550
+      internalID: 1365993090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d86a32076d3b6459e582ff2bd3540a
+      internalID: -107328540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca5b5601ed8a41478ec19e10f68f8b4
+      internalID: 1941393840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20378d7c624152488bb95814e19f993
+      internalID: 86124892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e051b8f00eeac4e99c3de53d3f5dcb
+      internalID: 1900121475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231dd72411421d7419b1067c3111769b
+      internalID: -1235383963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 443
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedab5e4d9adab646868f7c1e4599bf5
+      internalID: 2087271698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595d9f2bd98f0564699b5d53e941ae91
+      internalID: -844143972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753493c0f1322d742b79f64684ae1a6a
+      internalID: -2143261546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57f0feb8086d76439a9b923200694d0
+      internalID: 1035380771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89fd2b123313cc438084ffe99eddb99
+      internalID: 425660341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5ca1d5986c84b4596d63a3746b4220
+      internalID: 981921984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e500df25c22a26f4cab629f00c5937f4
+      internalID: -539504842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d30632346de764abe6bca9c27e2e5c
+      internalID: -727296718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc52e02b17ce21a478f69d749cbc20b8
+      internalID: 2084090596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: winning time-Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 0
+        width: 498
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86439271bcc4a7e48a000f2aed26f8d5
+      internalID: 371457821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      winning time-Sheet_57: -107328540
+      winning time-Sheet_7: 1983498855
+      winning time-Sheet_62: 2087271698
+      winning time-Sheet_21: 947011491
+      winning time-Sheet_29: -1393280506
+      winning time-Sheet_67: 981921984
+      winning time-Sheet_10: -914439351
+      winning time-Sheet_1: 1327992227
+      winning time-Sheet_53: -927517365
+      winning time-Sheet_20: -1302850329
+      winning time-Sheet_58: 1941393840
+      winning time-Sheet_37: -1028863319
+      winning time-Sheet_28: 1589983839
+      winning time-Sheet_69: -727296718
+      winning time-Sheet_49: 695855013
+      winning time-Sheet_56: 1365993090
+      winning time-Sheet_24: 375491853
+      winning time-Sheet_9: 570965389
+      winning time-Sheet_14: 1723977136
+      winning time-Sheet_25: 1185576634
+      winning time-Sheet_34: -435128511
+      winning time-Sheet_44: -1183920716
+      winning time-Sheet_43: 1288499241
+      winning time-Sheet_6: 2072229849
+      winning time-Sheet_65: 1035380771
+      winning time-Sheet_35: -1008712324
+      winning time-Sheet_22: -687447167
+      winning time-Sheet_40: 1588662597
+      winning time-Sheet_41: 1189328531
+      winning time-Sheet_4: -1304386594
+      winning time-Sheet_39: 1104269431
+      winning time-Sheet_60: 1900121475
+      winning time-Sheet_68: -539504842
+      winning time-Sheet_12: 590277485
+      winning time-Sheet_71: 371457821
+      winning time-Sheet_54: -1541671519
+      winning time-Sheet_59: 86124892
+      winning time-Sheet_3: -367164827
+      winning time-Sheet_32: -142582435
+      winning time-Sheet_47: -1802085208
+      winning time-Sheet_0: -10900678
+      winning time-Sheet_42: -493449314
+      winning time-Sheet_5: -781424338
+      winning time-Sheet_17: 603736516
+      winning time-Sheet_18: -1746604036
+      winning time-Sheet_38: -1535946444
+      winning time-Sheet_52: -946793637
+      winning time-Sheet_45: 2133150872
+      winning time-Sheet_33: -1133882038
+      winning time-Sheet_26: 1525337675
+      winning time-Sheet_2: 222920743
+      winning time-Sheet_50: -206946333
+      winning time-Sheet_63: -844143972
+      winning time-Sheet_31: -2082610355
+      winning time-Sheet_66: 425660341
+      winning time-Sheet_27: 1829201108
+      winning time-Sheet_55: -844965772
+      winning time-Sheet_64: -2143261546
+      winning time-Sheet_48: -615478926
+      winning time-Sheet_70: 2084090596
+      winning time-Sheet_15: -83938562
+      winning time-Sheet_8: -456578453
+      winning time-Sheet_46: -178371980
+      winning time-Sheet_61: -1235383963
+      winning time-Sheet_16: 752739544
+      winning time-Sheet_36: 489541805
+      winning time-Sheet_13: -1572042506
+      winning time-Sheet_30: 649172985
+      winning time-Sheet_23: -37314423
+      winning time-Sheet_51: -916464452
+      winning time-Sheet_11: -818116433
+      winning time-Sheet_19: -1117477634
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

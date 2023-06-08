@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BombItem
       objectReference: {fileID: 0}
+    - target: {fileID: 6281595422404870123, guid: 189097e18370619468d867cacc04da5c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 189097e18370619468d867cacc04da5c, type: 3}
 --- !u!4 &1558471248729935419 stripped
@@ -199,6 +203,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 983359582237264893, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
       propertyPath: itemToCollect
+      value: 
+      objectReference: {fileID: 7037468046705208689}
+    - target: {fileID: 983359582237264893, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
+      propertyPath: collectableItem
       value: 
       objectReference: {fileID: 7037468046705208689}
     - target: {fileID: 1885590827601232983, guid: 96145211b881051408a5c63e04bb9d09, type: 3}
