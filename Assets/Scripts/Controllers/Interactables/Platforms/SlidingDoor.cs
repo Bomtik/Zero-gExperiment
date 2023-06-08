@@ -7,9 +7,10 @@ using Interfaces.Hittable;
 public class SlidingDoor : MonoBehaviour, IHittable
 {
     [SerializeField] private GameObject door, button;
+    [SerializeField] private Vector3 doorMovement, buttonMovement;
     public void WhenHit(GameObject other)
     {
-        button.transform.DOMoveY(button.transform.position.y + 0.2f, 1);
-        door.transform.DOMoveY(door.transform.position.y + 4f, 4);
+        button.transform.DOMove(button.transform.position + buttonMovement, 1);
+        door.transform.DOMove(door.transform.position + doorMovement, 4);
     }
 }

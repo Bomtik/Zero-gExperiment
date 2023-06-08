@@ -7,13 +7,11 @@ using Extensions;
 
 public class Explosive : MonoSingleton<Explosive>, IHittable
 {
-    Animator anim;
     public Rigidbody2D RigidBody;
     public ExplosiveState State;
     public LineRenderer LineRenderer;
     private new void Awake()
     {
-        anim = GetComponent<Animator>();
         SetComponents();
     }
 
@@ -34,18 +32,7 @@ public class Explosive : MonoSingleton<Explosive>, IHittable
 
     public void WhenHit(GameObject other)
     {
-        //Play particle and destroy bomb
-        if (other.CompareTag("Melt") && gameObject.CompareTag("Acid"))
-        {
-            Destroy(other.gameObject);
-            anim.SetTrigger("crack");
-            StartCoroutine(DelayDestroy());
-        }
         Destroy(gameObject);
-    }
-    IEnumerator DelayDestroy()
-    {
-        yield return new WaitForSeconds(1f);
     }
 
     public Vector2[] Plot(Rigidbody2D rigidbody, Vector2 pos, Vector2 velocity, int steps)
