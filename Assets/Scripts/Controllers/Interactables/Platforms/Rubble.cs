@@ -30,7 +30,16 @@ public class Rubble : MonoBehaviour, IHittable
             anim.SetTrigger("boom");
             StartCoroutine(DelayDestroy());
         }
-        
+        if (other.CompareTag("Acid"))
+        {
+            if (gameObject.CompareTag("Melt"))
+            {
+
+                anim.SetTrigger("crack");
+                StartCoroutine(DelayDestroy());
+            }
+
+        }
     }
 
     IEnumerator DelayDestroy()
